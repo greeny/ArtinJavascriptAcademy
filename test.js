@@ -1,15 +1,12 @@
-const http = require('http');
+var nodeStatic = require('node-static');
 
-const hostname = '127.0.0.1';
-const port = 1337;
+//
+// Create a node-static server instance to serve the './www' folder
+//
+var file = new nodeStatic.Server('./www');
 
-http.createServer(
-	function (req, res) {
-		res.writeHead(200, { 'Content-Type': 'text/plain' });
-		res.end('Hello World\n');
-	}
-).listen(port, hostname,
-	function () {
-		console.log('Server running at http://' + hostname + ':' + port);
-	}
-);
+require('http').createServer(function (request, response) {
+	request.addListener('end', function () {
+		file.serve(request, response);
+	}).resume();
+}).listen(8080);
