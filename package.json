@@ -1,0 +1,19 @@
+{
+	"name": "artin",
+	"version": "1.0.0",
+	"description": "JavaScript academy by Artin",
+	"dependencies": {
+		"node-static": "^0.7.7"
+	},
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/greeny/ArtinJavascriptAcademy.git"
+	},
+	"author": "greeny",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/greeny/ArtinJavascriptAcademy/issues"
+	},
+	"homepage": "https://github.com/greeny/ArtinJavascriptAcademy#readme"
+}
