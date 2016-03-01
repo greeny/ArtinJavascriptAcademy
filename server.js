@@ -1,8 +1,5 @@
 var nodeStatic = require('node-static');
 
-//
-// Create a node-static server instance to serve the './www' folder
-//
 var file = new nodeStatic.Server('./www');
 
 require('http').createServer(function (request, response) {
@@ -10,3 +7,5 @@ require('http').createServer(function (request, response) {
 		file.serve(request, response);
 	}).resume();
 }).listen(8080);
+
+console.log('Running server at localhost:8080');
